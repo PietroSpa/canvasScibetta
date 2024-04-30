@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/icona.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>BimbiGames</title>
+  </head>
+  <body>
+    <div id="inizio">
+    <nav class="navbar">
+      <div class="container">
+        <a href="#inizio" id="logo">
+          <div class="logo2">
+            <img src="images/logo2.png" alt="Logo" />
+          </div>
+          <div class="logo">
+            <img src="images/logo.png" alt="Logo" />
+          </div>
+        </a>
+        <div class="nav-links">
+          <a href="#home" class="scroll-link">Giochi</a>
+          <a href="2048/index.html" class="scroll-link">2048</a>
+          <a href="memory/index.html" class="scroll-link">Memory</a>
+          <a href="Disegna/index.html">Disegna</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+    <canvas id="sfondo" class="sfondo"></canvas>
+    <div id="content">
+        <video
+          autoplay
+          muted
+          loop
+          controls
+          width="100%"
+          height="100%"
+          id="myVideo"
+        >
+          <source src="images/tutorial.mp4" type="video/mp4" />
+        </video>
+      
+      <div id="home">
+      <div class="card-container">
+        <!-- <a href="pagina1.html" class="card-link">
+        <div class="card">
+           <span class="card-name">Card 1</span> 
+          <img src="images/tangram_animali.jpg" alt="Card 1" />
+        </div>
+      </a> -->
+      <a href="2048/index.html" class="card-link">
+        <div class="card">
+          <!-- <span class="card-name">Card 2</span> -->
+          <img src="images/2048.png" alt="Card 2" />
+        </div>
+      </a>
+        <a href="memory/index.html" class="card-link">
+        <div class="card">
+          <!-- <span class="card-name">Card 3</span> -->
+          <img src="images/memory.png" alt="Card 3" />
+        </div>
+        </a>
+        <a href="Disegna/index.html" class="card-link">
+        <div class="card">
+          <!-- <span class="card-name">Card 4</span> -->
+          <img src="images/disegnapng.png" alt="Card 4" />
+        </div>
+      </a>
+      </div>
+    </div>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>

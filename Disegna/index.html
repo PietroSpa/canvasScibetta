@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Paint</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icons/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      .centered-div {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="nav-links"> 
+        <a href="../index.html">Home</a>
+        <a href="../2048/index.html">2048</a>
+        <a href="../memory/index.html"">Memory</a>
+        <a href="#" id="quarto-link">Spiegazzione</a>
+      </div>
+    </div>
+    <h1>Disegna quello che vuoi e se ti piace scaricalo</h1>
+    <div class="centered-div">
+    <div class="container">
+
+      <section class="drawing-board">
+        <canvas></canvas>
+      </section>
+      <section class="tools-board">
+        <div class="row">
+          <label class="title">Figure</label>
+          <ul class="options">
+            <li class="option tool" id="rettangolo">
+              <img src="icons/rectangle.svg" alt="">
+              <span>Rettangolo</span>
+            </li>
+            <li class="option tool" id="cerchio">
+              <img src="icons/circle.svg" alt="">
+              <span>Cerchio</span>
+            </li>
+            <li class="option tool" id="triangolo">
+              <img src="icons/triangle.svg" alt="">
+              <span>Triangolo</span>
+            </li>
+            <li class="option">
+              <input type="checkbox" id="fill-color">
+              <label for="fill-color">Riempi l'immagine</label>
+            </li>
+          </ul>
+        </div>
+        <div class="row">
+          <label class="title">Opzioni</label>
+          <ul class="options">
+            <li class="option tool selected" id="pennello">
+              <img src="icons/brush.svg" alt="">
+              <span>Pennello</span>
+            </li>
+            <li class="option tool" id="gomma">
+              <img src="icons/eraser.svg" alt="">
+              <span>Gomma</span>
+            </li>
+            <li class="option">
+              <input type="range" id="size-slider" min="1" max="30" value="5">
+            </li>
+          </ul>
+        </div>
+        <div class="row colors">
+          <label class="title">Colori</label>
+          <ul class="options">
+            <li class="option"></li>
+            <li class="option selected"></li>
+            <li class="option"></li>
+            <li class="option"></li>
+            <li class="option">
+              <input type="color" id="color-picker" value="#4A98F7">
+            </li>
+          </ul>
+        </div>
+        <div class="row buttons">
+          <button class="clear-canvas">Pulisci lavagna</button>
+          <button class="save-img">Salva Immagine</button>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      const quartoLink = document.getElementById('quarto-link');
+
+      quartoLink.addEventListener('click', () => {
+        Swal.fire({
+        title: 'Disegna cio che vuoi',
+        text: 'Clicca sulle diversi opzioni per disegnare figure piene o vuote o semplice righe. Se vuoi puoi salvare la immagine o cancellarla e ricominciare',
+        width: '600px', 
+        customClass: {
+          container: 'custom-swal-container' 
+        },
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown',
+          title: 'animate__animated animate__fadeIn animate__slower' 
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        },
+        confirmButtonText: 'Capito', 
+        confirmButtonClass: 'custom-swal-confirm-button', 
+    });
+      });
+
+      quartoLink.click();
+      
+    </script>
+  </body>
+</html>

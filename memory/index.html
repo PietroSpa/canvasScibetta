@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/4545719-200.png" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="nav-links"> 
+        <a href="../index.html">Home</a>
+        <a href="../2048/index.html">2048</a>
+        <a href="../Disegna/index.html">Disegna</a>
+        <a href="#" id="quarto-link">Spiegazzione</a>
+      </div>
+      </div>
+    <div class="wrapper">
+      <div class="stats-container">
+        <h2>Memory</h2>
+        <div id="moves-count"></div>
+        <div id="time"></div>
+      </div>
+      <div class="game-container"></div>
+    </div>
+    <div class="controls-container">
+      <p id="result"></p>
+      <button id="start">Rinizia la partita</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      const quartoLink = document.getElementById('quarto-link');
+
+      quartoLink.addEventListener('click', () => {
+        Swal.fire({
+        title: 'Memory',
+        text: 'Il memory è un gioco di carte semplice e divertente che stimola lo sviluppo della memoria. Per giocare a Memory basta trovare coppie di carte uguali per un totale di 8 coppie',
+        width: '600px', 
+        customClass: {
+          container: 'custom-swal-container' 
+        },
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown',
+          title: 'animate__animated animate__fadeIn animate__slower' 
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        },
+        confirmButtonText: 'Capito', 
+        confirmButtonClass: 'custom-swal-confirm-button', 
+    });
+      });
+
+      quartoLink.click();
+      
+    </script>
+  </body>
+</html>

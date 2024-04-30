@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #faf8ef;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  color: #776e65;
+}
+
+.container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+.score-container {
+  color: #776e65;
+}
+
+#score {
+  font-weight: 600;
+}
+
+.grid {
+  width: 25em;
+  height: 25em;
+  background-color: #cdc1b5;
+  border: 5px solid #bbada0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.5em;
+}
+
+.box {
+  width: 97.5px;
+  height: 97.5px;
+  border: 5px solid #bbada0;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #faf8ef;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#restart_button {
+  background-color: #8f7a66;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 1em;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+#new_game {
+  background-color: #8f7a66;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 0.8em;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.hide {
+  display: none;
+}
+
+.navbar {
+  background-color: rgba(24, 24, 36, 255);
+  text-align: center;
+  padding: 15px 0;
+}
+
+.nav-links a {
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 20px;
+  color: #fff;
+  padding: 5px 10px;
+  transition: color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  outline: none;
+  margin: 0 10px;
+  padding: 10px 20px;
+}
+
+.nav-links a::after {
+  width: 0%;
+  height: 2px;
+  display: block;
+  background-color: #fff;
+  content: " ";
+  position: absolute;
+  bottom: -3px; 
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transition: width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
